@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Nixie+One&display=swap');
+.nixie-one-regular {
+  font-family: "Nixie One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+body {
+  background-color: #222629;
+  color:white;
+  font-family: "Nixie One", system-ui;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 56px; 
+  width: 95%;
+  background-color: #474B4f; 
+  color: white;
+  text-decoration: none;
+  border-radius: 16px;
+  margin: 0 auto;
+  margin-top: 15px;
+  position: relative;
+}
+.navbar-item {
+  color:white;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  position: relative;
+}
+.navbar-item::before{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #86C232;
+  transition: width 0.3s ease;
+  border-radius: 8px;
+}
+.navbar-item:hover::before {
+  width: 100%;
+}
+a {
+  color:#6B6E70;
+}
+.createRecipe {
+  max-width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  margin-top: 10px;
+  width: 100%;
+}
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+  text-align: center; /* Center align the text */
+}
+.form__field::placeholder {
+  color: transparent;
+  text-align: center; /* Center align the placeholder */
+}
+.form__field:focus {
+  border-bottom: 2px solid #9b9b9b; /* Keep the border color the same */
+  background-color: transparent; /* Prevent background color change on focus */
+}
+.form__label {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  transition: 0.2s;
+  font-size: 1.3rem;
+  color: #9b9b9b;
+  text-align: center; /* Center align the label */
+}
+.submitButton {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #9b9b9b;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+  margin: 0 auto; 
+}
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+.ingredientContainer {
+  display: flex;
+  align-items: center; 
+}
+
+.addIngredientButton {
+  margin-left: 10px; 
+}
+
+.createButton {
+  padding: 10px 20px;
+  background-color: #222629; 
+  font-size: 1.5rem;
+  color: #b9b7b7;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+  text-align: center;
+}
+
+.createButton:hover {
+  background-color: #474B4F;
+}
+
+.createRecipeTitle {
+  font-size: 48px;
+
+  background: linear-gradient(90deg, #f67e9c, #3e1da2);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.homeTitle {
+  font-size: 48px;
+  background: linear-gradient(90deg, #D4145A,#FBB03B);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+  justify-content: center; /* Horizontally center items */
+  align-items: center;
+}
+
+/**
+* css for home page
+*/
+
+.recipeItem {
+  margin-bottom: 20px; 
+  padding: 10px; 
+  background-color: #222629; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+ul {
+  list-style-type: none;
+  padding: 0; 
+  margin: 0;
+}
+
+.recipeItem h2 {
+  color: #c8bfbf; 
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.recipeItem button {
+  padding: 8px 16px; 
+  background: transparent; 
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  color: #6B6E70; 
+  margin-right: 10px; 
+}
+
+.recipeItem button:hover {
+  background-color: #f0f0f0; 
+}
+
+.recipeItem input[type="number"] {
+  padding: 8px; 
+  border: 1px solid #ccc; 
+  border-radius: 4px;
+  font-size: 14px; 
+  width: 100px; 
+  background-color: #222629; 
+  color: #6B6E70; 
+}
+
+.instructions p {
+  color: #c8bfbf; 
+  font-size: 16px; 
+  margin-top: 10px; 
+}
+
+.instructions img {
+  max-width: 100%;
+  margin-top: 10px; 
+}
+
+.prepTime {
+  color: #c8bfbf; 
+  font-size: 14px; 
+  margin-top: 10px; 
+}
+
+/* CSS for Favorite page */
+
+.favoriteTitle {
+  font-size: 48px;
+  background: linear-gradient(90deg, #FF5F6D,#FFC371);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* CSS for authorization page*/
+
+.authorization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}
+.registerTitle {
+  font-size: 48px;
+  background: linear-gradient(90deg, #11998E , #38EF7D);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+
+}
+
+.loginTitle {
+
+  font-size: 48px;
+  background: linear-gradient(90deg, #EA8D8D ,#A890FE);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.auth-container form {
+  margin: 20px;
+  padding: 20px;
+  background-color: #222629;
+}
+
+.loginTitle {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #333537;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.line-text {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #080808;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+
+h1 {
+  position: relative;
+  padding: 0;
+  margin: 25px 0;
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 40px;
+  color: #cbc0c0;
+  -webkit-transition: all 0.4s ease 0s;
+  -o-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
+}
+
+h1 span {
+  display: block;
+  font-size: 0.5em;
+  line-height: 1.3;
+}
+h1 em {
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* === HEADING STYLE #1 === */
+.one h1 {
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+.one h1:before {
+  width: 28px;
+  height: 5px;
+  display: block;
+  content: "";
+  position: absolute;
+  bottom: 3px;
+  left: 50%;
+  margin-left: -14px;
+  background-color: #b80000;
+}
+.one h1:after {
+  width: 100px;
+  height: 1px;
+  display: block;
+  content: "";
+  position: relative;
+  margin-top: 25px;
+  left: 50%;
+  margin-left: -50px;
+  background-color: #b80000;
+}
+
+
+
+
+
+
